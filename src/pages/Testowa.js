@@ -6,6 +6,8 @@ import axios from "axios";
 
 import { Box } from "@chakra-ui/react";
 import { Center, Square, Circle } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const Testowa = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -25,10 +27,16 @@ const Testowa = () => {
       <Navbar />
 
       <Box className="bg-blue-500" w="100%" h="300px" p={4} color="white">
-        <Center h="100%">
-          <h1>Siema</h1>
-          <div className="bg-pink-500 w-[500px]">This is the Box</div>
-          <div className="bg-[#123123] w-[500px]">COLOR</div>
+        <Center h="100%" className="flex flex-col gap-4">
+          <Link href="https://blocks.wickedtemplates.com/" isExternal>
+            Wicked Templates: https://blocks.wickedtemplates.com/ <ExternalLinkIcon mx="2px" />
+          </Link>
+
+          <Link href="https://chakra-ui.com" isExternal>
+            Chakra Design system: https://chakra-ui.com <ExternalLinkIcon mx="2px" />
+          </Link>
+          <div className="bg-pink-500 w-[500px]">JIT TEST</div>
+          <div className="bg-[#123123] w-500px">CUSTOM [COLOR] - jit</div>
         </Center>
       </Box>
 
